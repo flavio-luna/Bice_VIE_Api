@@ -2,7 +2,6 @@
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BanBice.Cl.IndicadoresEconomicos.Api.Helpers
 {
@@ -27,31 +26,18 @@ namespace BanBice.Cl.IndicadoresEconomicos.Api.Helpers
                 FechaEnvioValidacion = DateTime.Now,
                 CorreoValidado = true,
                 Edad= 33,
-                HashContrasenna = Crypto.CrearHashSHA256("FALunaP", Salt),
+                HashContrasenna = Crypto.CrearHashSHA256("luna", Salt),
                 SaltContrasenna = Salt,
                 Bloqueado = false,
                 Intentos = 0
             },
-            new UsuarioEntity()
-            {
-                Id = Guid.Parse("cec0a7bc-ea1d-4c9d-ac5f-457ff4cda1c4"),
-                NombreCompleto = "Maria Eugenia Damianovic",
-                Correo = "maria.damianovic@bice.cl",
-                IdValidacionCorreo = Guid.NewGuid(),
-                FechaEnvioValidacion = DateTime.Now,
-                CorreoValidado = false,
-                Edad= 33,
-                HashContrasenna = Crypto.CrearHashSHA256("madamian", Salt),
-                SaltContrasenna = Salt,
-                Bloqueado = false,
-                Intentos = 0
-            },
+           
 
             new UsuarioEntity()
             {
                 Id = Guid.NewGuid(),
                 NombreCompleto = "Usuario Bloqueado",
-                Correo = "bloqueado@bice.cl",
+                Correo = "bloqueado@bittobyte.cl",
                 IdValidacionCorreo = Guid.NewGuid(),
                 FechaEnvioValidacion = DateTime.Now.AddDays(-30),
                 CorreoValidado = true,
